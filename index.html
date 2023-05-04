@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>PWA Example</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+    <h1>PWA Example</h1>
+    <img id="photo" class="photo">
+    <input type="file" accept="image/*" capture="camera" id="camera" />
+    <script>
+
+        if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
+        }
+        //Acceso a la cámara
+        const photo = document.querySelector('#photo');
+        const camera = document.querySelector('#camera');
+        camera.addEventListener('change', function (e) {
+        photo.src = URL.createObjectURL(e.target.files[0]);
+        });
+
+        
+    </script>
+</body>
+</html>

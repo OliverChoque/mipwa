@@ -1,0 +1,20 @@
+{
+        "lang": "en-us",
+        "name": "PWA Ejemplo",
+        "short_name": "Mi primera aplicación PWA",
+        "description": "Mi aplicación Web",
+        "start_url": "index.html",
+        "background_color": "#2f3d58",
+        "theme_color": "#2f3d58",
+        "orientation": "any",
+        "display": "standalone",
+        "permissions": {
+            "geolocation": {}
+        },
+        "icon": [
+            {
+                "src": "/icon.png",
+                "sizes": "512x512"
+            }
+    ]
+}
